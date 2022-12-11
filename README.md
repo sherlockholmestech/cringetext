@@ -1,0 +1,2 @@
+# cringetext
+Generate cringe text
