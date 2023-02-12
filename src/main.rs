@@ -6,17 +6,21 @@ fn main() {
     let mut cringetext = String::new();
     let mut cap_streak = 0;
     let mut capital: bool = rand::random::<bool>();
-    for char in text.chars() {
-        if capital == false {
-            cringetext.push(char.to_ascii_lowercase());
-            capital = rand::random();
-        } else {
-            cringetext.push(char.to_ascii_uppercase());
-            capital = rand::random();
-            cap_streak += 1;
-            if cap_streak == 2 {
-                capital = false;
-                cap_streak = 0;
+    if text == "-h" || text == "--help" {
+        println!("CringeText By Sherlock Holmes");
+    } else {
+        for char in text.chars() {
+            if capital == false {
+                cringetext.push(char.to_ascii_lowercase());
+                capital = rand::random();
+            } else {
+                cringetext.push(char.to_ascii_uppercase());
+                capital = rand::random();
+                cap_streak += 1;
+                if cap_streak == 2 {
+                    capital = false;
+                    cap_streak = 0;
+                }
             }
         }
     }
