@@ -7,7 +7,7 @@ fn main() {
     let mut cap_streak = 0;
     let mut capital: bool = rand::random::<bool>();
     if text == "-h" || text == "--help" {
-        println!("CringeText By Sherlock Holmes");
+        cringetext = String::from("CringeText.\nCopyright (c) 2022 Sherlock Holmes");
     } else {
         for char in text.chars() {
             if capital == false {
